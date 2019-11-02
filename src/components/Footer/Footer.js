@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
+import { trStr } from '../../utils/translate'
 import planetSvg from '../../images/planet.svg'
 import styles from './Footer.module.scss'
 
@@ -108,7 +109,7 @@ const Footer = ({ intl }) => {
                   children={intl.formatMessage({
                     id: `footer.${title}.${children}`,
                   })}
-                  href={href}
+                  href={title === 'company' ? trStr(intl, `footer.${title}.${children}.link`) : href}
                   className={cx(styles.text, styles.category__item)}
                 />
               ))}
