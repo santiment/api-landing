@@ -91,6 +91,8 @@
   "plan.premium.desc": "Full historical data and generous rate limits",
   "plan.custom.title": "Corporate",
   "plan.custom.desc": "For organizations that need advanced data and support",
+  "plan.title.left": "Go ",
+  "plan.title.right": "now",
 
   "plan.feature.AC": "API calls / minute",
   "plan.feature.AC.month": "API calls / monthly",
@@ -134,6 +136,12 @@
   "footer.company.jobs": "Jobs",
   "footer.company.contact": "Contact us",
 
+  "footer.company.about.link": "https://santiment.net/about-santiment/",
+  "footer.company.customers.link": "https://santiment.net/customers/",
+  "footer.company.team.link": "https://santiment.net/about-santiment/team/",
+  "footer.company.jobs.link": "https://santiment.net/about-santiment/jobs/",
+  "footer.company.contact.link": "https://santiment.net/about-santiment/contact/",
+
   "footer.resources": "Resources",
   "footer.resources.start": "Getting started",
   "footer.resources.docs": "Docs",
@@ -167,11 +175,24 @@
   "billing.month.short": "/mo",
   "billing.year": "year",
 
+  "billing.username": "John Doe",
+  "billing.payment_details": "Payment details",
+  "billing.discount_code": "Discount code",
+  "billing.money_back": "30 day money back guarantee",
+  "billing.fully_secured": "Fully secured checkout",
+  "billing.card_below_info_left": "Your card will be charged ",
+  "billing.every": "every",
+  "billing.card_number": "Card number",
+  "billing.card_below_info_middle": "until you decide to downgrade or unsubscribe. Next billing date will be",
+  "billing.card_below_info_right": " ",
+
   "price.bill_discount.free": "Free forever",
   "price.bill_discount.custom": "Based on your needs",
   "price.bill_discount.left": " ",
   "price.bill_discount.month": " if billed monthly",
   "price.bill_discount.year": " if billed yearly",
+  "price.yearly": "yearly",
+  "price.monthly": "monthly",
 
   "payment.title.left": "Payment for the ",
   "payment.title.right": " plan ",
@@ -184,6 +205,7 @@
   "payment.state":"State/Region",
   "payment.street":"Street Address",
   "payment.phone":"Phone Number",
+  "payment.bill_address":"Add billing address",
 
   "payment.close": "Close",
   "payment.confirm": "Confirm payment",

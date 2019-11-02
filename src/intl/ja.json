@@ -91,6 +91,8 @@
   "plan.premium.desc": "フル・ヒストリカル・データとフレキシブル・レート・リミット",
   "plan.custom.title": "エンタープライズ",
   "plan.custom.desc": "さらに専門的なデータ・サポートが必要な団体・企業向け",
+  "plan.title.left": " ",
+  "plan.title.right": "プランを申し込む",
 
   "plan.feature.AC": "API コール/ 分",
   "plan.feature.AC.month": "API コール/ 月",
@@ -119,7 +121,7 @@
   "ready.title": "さあ始めましょう！",
   "ready.text.top": "下記リンクより、Santiment API アクセスや、Discord チャンネル",
   "ready.text.bottom": "をご利用いただけます。",
-  "ready.btn": "をご利用いただけます。",
+  "ready.btn": "スタート  ",
 
   "footer.labs": "ラボ",
   "footer.labs.trends": "ソーシャルトレンド",
@@ -134,6 +136,13 @@
   "footer.company.team": "チーム",
   "footer.company.jobs": "求人情報",
   "footer.company.contact": "お問いあわせ先",
+
+  "footer.company.about.link": "https://santiment.net/jp/about-santiment/",
+  "footer.company.customers.link": "https://santiment.net/jp/customers/",
+  "footer.company.team.link": "https://santiment.net/jp/about-santiment/team/",
+  "footer.company.jobs.link": "https://santiment.net/jp/about-santiment/jobs/",
+  "footer.company.contact.link": "https://santiment.net/jp/about-santiment/contact/",
+
 
   "footer.resources": "リソース",
   "footer.resources.start": "スタート",
@@ -168,11 +177,26 @@
   "billing.month.short": "/月",
   "billing.year": "年",
 
+  "billing.username": "カード番号",
+  "billing.payment_details": "お支払い",
+  "billing.discount_code": "クーポンコード",
+  "billing.money_back": "30日間返金保証",
+  "billing.every": " ",
+  "billing.card_number": "カード番号",
+  "billing.fully_secured": "お支払いは暗号化し安全に処理されます。",
+  "billing.card_below_info_left": "ダウングレード、もしくはご解約されるまで毎年 ",
+  "billing.card_below_info_middle": " が請求されます。次回は ",
+  "billing.card_below_info_right": " のお引き落としになります。",
+
+
   "price.bill_discount.free": "無料でご利用いただけます",
   "price.bill_discount.custom": "ニーズに応じてカスタマイズ",
   "price.bill_discount.left": "月払いの場合 ",
   "price.bill_discount.month": "/月",
   "price.bill_discount.year": "/年",
+
+  "price.yearly": " 年間一括",
+  "price.monthly": "月",
 
   "payment.title.left": " ",
   "payment.title.right": " プランお申し込み ",
@@ -185,6 +209,8 @@
   "payment.state": "市町村",
   "payment.street": "番地",
   "payment.phone": "お電話番号",
+
+  "payment.bill_address": "請求先住所を追加する",
 
   "payment.close": "閉じる",
   "payment.confirm": "お支払",
