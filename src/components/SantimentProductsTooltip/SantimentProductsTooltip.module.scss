@@ -16,9 +16,14 @@
 }
 
 .link {
+  min-width: 180px;
   margin-left: auto;
   color: var(--jungle-green);
   fill: var(--jungle-green);
+
+  &:hover {
+    color: var(--jungle-green-hover);
+  }
 }
 
 .linkArrow {
@@ -33,18 +38,23 @@
 
 .products {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .product {
   padding: 9px;
   cursor: pointer;
   display: flex;
-  width: 321px;
-  height: 124px;
+  width: 345px;
+  min-height: 124px;
 
   &:hover {
     background: var(--athens);
     border-radius: $border-radius;
+  }
+
+  @include responsive('phone', 'phone-xs') {
+    width: 250px;
   }
 }
 
@@ -75,6 +85,11 @@
 
 .productLink {
   margin: 10px 0 0;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
 }
 
 .arrow {

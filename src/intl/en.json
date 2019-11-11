@@ -2,6 +2,9 @@
   "header.metrics": "Metrics",
   "header.use_cases": "Use cases",
   "header.pricing": "Pricing",
+  "header.support": "Support",
+
+  "header.product.sanbase": "Behavior analysis & monitoring platform for 1000+ crypto assets",
 
   "main.comprehensive": "Comprehensive",
   "main.crypto_api": "crypto API",

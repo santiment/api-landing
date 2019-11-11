@@ -1,3 +1,5 @@
+@import '~@santiment-network/ui/mixins';
+
 .login {
   padding: 6px 35px;
 }
@@ -14,6 +16,10 @@
   background: var(--white) !important;
   display: flex;
   align-items: center;
+
+  @include responsive('phone', 'phone-xs') {
+    margin-top: 10px;
+  }
 }
 
 .profileIcon {

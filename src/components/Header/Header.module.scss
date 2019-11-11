@@ -98,19 +98,28 @@
 .dividerLeft {
   height: 40px;
   border-left: 1px solid var(--porcelain);
-  margin: 0 12px;
+  margin-left: 12px;
+
+  @include responsive('phone', 'phone-xs') {
+    display: none;
+  }
 }
 
 .dividerRight {
   height: 32px;
   border-left: 1px solid var(--porcelain);
   margin: 0 24px;
+
+  @include responsive('phone', 'phone-xs') {
+    display: none;
+  }
 }
 
 .product {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 12px;
 }
 
 .productName {
@@ -122,8 +131,6 @@
 
 .headerIcon {
   fill: var(--waterloo);
-  margin-right: 12px;
-  display: flex;
 
   &:hover {
     fill: var(--dodger-blue);

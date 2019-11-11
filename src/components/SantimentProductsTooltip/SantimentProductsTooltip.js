@@ -11,8 +11,7 @@ const PRODUCTS = [
   {
     img: sanbaseLogoImg,
     title: 'Sanbase',
-    description:
-      'Behavior analysis & monitoring platform for 1000+ crypto assets',
+    description: 'header.product.sanbase',
     to: 'https://app.santiment.net'
   },
   {
@@ -29,12 +28,14 @@ const PRODUCTS = [
   }
 ]
 
-const ProductItem = ({ product: { to, img, title, description } }) => {
+const ProductItem = ({ product: { to, img, title, description }, intl }) => {
   const [showLink, setShowLink] = useState(false)
+
 
   return (
     <a
       href={to}
+      target='_blank' rel='noopener noreferrer'
       className={styles.product}
       onMouseEnter={() => setShowLink(true)}
       onMouseLeave={() => {
@@ -44,11 +45,12 @@ const ProductItem = ({ product: { to, img, title, description } }) => {
       <img className={styles.productImg} src={img} alt={title} />
       <div className={styles.productInfo}>
         <div className={styles.productTitle}>{title}</div>
-        <div className={styles.productDescription}>{description}</div>
+        <div className={styles.productDescription}> {intl.formatMessage({ id: description })}</div>
         {showLink && (
           <MakeLink
             className={styles.productLink}
             to={to}
+            as='div'
             title={'Go to ' + title}
           />
         )}
@@ -57,28 +59,29 @@ const ProductItem = ({ product: { to, img, title, description } }) => {
   )
 }
 
-const MakeLink = ({ to, title, className }) => (
-  <a href={to} className={cx(styles.link, className)}>
+const MakeLink = ({ to, title, className, as = 'a' }) => {
+  const El = as
+  return <El href={to} className={cx(styles.link, className)} >
     {title} <Icon className={styles.linkArrow} type='pointer-right' />
-  </a>
-)
+  </El>
+}
 
 const OpenTrigger = () => <Icon type='arrow-down' />
 const CloseTrigger = () => <Icon type='arrow-up' />
 
-const SantimentProductsTooltip = ({ className }) => {
+const SantimentProductsTooltip = ({ className, intl, children }) => {
   const [isOpen, setOpen] = useState(false)
 
   return (
     <Tooltip
-      passOpenStateAs='isActive'
       closeTimeout={150}
       position='bottom'
       align='start'
       offsetY={20}
       trigger={
-        <div className={cx(className, styles.arrow, isOpen && styles.opened)}>
-          {isOpen ? <CloseTrigger /> : <OpenTrigger />}
+        <div className={styles.trigger} >
+          {children}
+          <div className={cx(className, styles.arrow, isOpen && styles.opened)}>{isOpen ? <CloseTrigger /> : <OpenTrigger />}</div>
         </div>
       }
       onOpen={() => {
@@ -95,7 +98,7 @@ const SantimentProductsTooltip = ({ className }) => {
         </div>
         <div className={styles.products}>
           {PRODUCTS.map((item, index) => (
-            <ProductItem key={index} product={item} />
+            <ProductItem key={index} product={item} intl={intl} />
           ))}
         </div>
       </div>
