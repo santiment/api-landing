@@ -17,20 +17,19 @@ const PRODUCTS = [
   {
     img: sheetsLogoImg,
     title: 'Sheets',
-    description: 'Google Spreadsheets plugin for importing Santiment data',
+    description: 'header.product.sheets',
     to: 'https://sheets.santiment.net'
   },
   {
     img: neuroLogoImg,
     title: 'API',
-    description: 'The most comprehsive crypto API on the market',
+    description: 'header.product.neuro',
     to: 'https://neuro.santiment.net'
   }
 ]
 
 const ProductItem = ({ product: { to, img, title, description }, intl }) => {
   const [showLink, setShowLink] = useState(false)
-
 
   return (
     <a
@@ -93,8 +92,8 @@ const SantimentProductsTooltip = ({ className, intl, children }) => {
     >
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.title}>Santiment products</div>
-          <MakeLink to='https://santiment.net' title='Go to Santiment.net' />
+          <div className={styles.title}>{intl.formatMessage({ id: 'header.products' })}</div>
+          <MakeLink to='https://santiment.net' title={intl.formatMessage({ id: 'header.santiment.goto' })}/>
         </div>
         <div className={styles.products}>
           {PRODUCTS.map((item, index) => (
