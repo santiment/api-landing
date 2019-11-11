@@ -52,11 +52,11 @@ const Header = ({ isAccountPage, intl }) => {
           </Link>
           <div className={styles.dividerRight}/>
           <a
-            className={styles.link}
+            className={styles.headerIcon}
             href='mailto:support@santiment.net'
             onClick={closeNav}
           >
-            {intl.formatMessage({ id: 'header.support' })}
+            <Icon type='question-round'/>
           </a>
           <AccountBtn isAccountPage={isAccountPage} onClick={closeNav} />
         </nav>

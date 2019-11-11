@@ -9,3 +9,17 @@
     fill: var(--dodger-blue);
   }
 }
+
+.profileBtn {
+  background: var(--white) !important;
+  display: flex;
+  align-items: center;
+}
+
+.profileIcon {
+  fill: var(--waterloo);
+
+  &:hover {
+    fill: var(--dodger-blue);
+  }
+}

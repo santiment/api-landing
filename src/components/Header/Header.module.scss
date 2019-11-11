@@ -92,7 +92,7 @@
 }
 
 .linkLast {
-  margin: 0;
+  margin-right: 6px;
 }
 
 .dividerLeft {
@@ -118,4 +118,14 @@
   @include text('body-2', 'm');
 
   color: $rhino;
+}
+
+.headerIcon {
+  fill: var(--waterloo);
+  margin-right: 12px;
+  display: flex;
+
+  &:hover {
+    fill: var(--dodger-blue);
+  }
 }
