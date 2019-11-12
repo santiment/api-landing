@@ -4,6 +4,13 @@
   "header.pricing": "プライス",
   "header.support": "サポート",
 
+  "header.products": "Santiment製品",
+  "header.santiment.goto": "Santiment.netにアクセス",
+
+  "header.product.sanbase": "1000以上の暗号資産の動作分析および監視プラットフォーム",
+  "header.product.sheets": "SantimentデータをインポートするためのGoogle Spreadsheetsプラグイン",
+  "header.product.neuro": "市場で最も包括的な暗号API",
+
   "main.comprehensive": "多機能",
   "main.crypto_api": "暗号資産 API",
   "main.description": "100% カスタマイズされたオンチェーン、ソーシャル、Github、ファンダメンタルデータを活用しましょう。",

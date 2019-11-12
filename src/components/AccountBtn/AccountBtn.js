@@ -1,4 +1,5 @@
 import React from 'react'
+import cx from 'classnames'
 import { injectIntl, Link } from 'gatsby-plugin-intl'
 import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
@@ -22,7 +23,7 @@ const btnProps = {
       })
     },
   },
-  true: { className: styles.account, children: <Icon type='profile' /> },
+  true: { className: styles.account, children: <Icon type='profile' className={styles.profileIcon} /> },
 }
 
 const AccountBtn = ({ intl, isAccountPage }) => {
@@ -37,6 +38,7 @@ const AccountBtn = ({ intl, isAccountPage }) => {
             variant='flat'
             isActive={isAccountPage}
             {...props}
+            className={cx(props.className, styles.profileBtn)}
           >
             {typeof children === 'function' ? children(intl) : children}
           </Button>

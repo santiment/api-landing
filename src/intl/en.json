@@ -4,6 +4,13 @@
   "header.pricing": "Pricing",
   "header.support": "Support",
 
+  "header.products": "Santiment products",
+  "header.santiment.goto": "Go to Santiment.net",
+
+  "header.product.sanbase": "Behavior analysis & monitoring platform for 1000+ crypto assets",
+  "header.product.sheets": "Google Spreadsheets plugin for importing Santiment data",
+  "header.product.neuro": "The most comprehsive crypto API on the market",
+
   "main.comprehensive": "Comprehensive",
   "main.crypto_api": "crypto API",
   "main.description": "Get 100% custom-built and unique terabytes of processed on-chain, social, github and fundamental data sets",
