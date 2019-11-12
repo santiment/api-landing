@@ -34,7 +34,6 @@ const ProductItem = ({ product: { to, img, title, description }, intl }) => {
   return (
     <a
       href={to}
-      target='_blank' rel='noopener noreferrer'
       className={styles.product}
       onMouseEnter={() => setShowLink(true)}
       onMouseLeave={() => {
