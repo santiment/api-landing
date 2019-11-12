@@ -14,8 +14,6 @@
 
 .profileBtn {
   background: var(--white) !important;
-  display: flex;
-  align-items: center;
 
   @include responsive('phone', 'phone-xs') {
     margin-top: 10px;
