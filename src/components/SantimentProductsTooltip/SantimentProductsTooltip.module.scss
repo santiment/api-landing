@@ -24,6 +24,7 @@
   margin-left: auto;
   color: var(--jungle-green);
   fill: var(--jungle-green);
+  min-width: 180px;
 
   &:hover {
     color: var(--jungle-green-hover);
@@ -37,23 +38,25 @@
 
 .title {
   color: var(--waterloo);
+  margin-right: 10px;
 
   @include text('body-3');
 }
 
 .products {
   display: flex;
-}
-
-.trigger {
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .wrapper {
   width: 363px;
   min-height: 146px;
   padding: 24px 12px 9px 12px;
+
+  @include responsive('phone', 'phone-xs') {
+    width: initial;
+    max-width: 363px;
+  }
 
   &:hover {
     background: var(--athens);
@@ -134,4 +137,9 @@
   background: var(--green-light);
   border-radius: 2px;
   fill: var(--jungle-green);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
 }
