@@ -108,14 +108,13 @@
   "plan.feature.AM": "アドバンス・メトリック",
   "plan.free.feature.AR": "著作権情報表示要",
   "plan.free.feature.HDA": "最新24時間を除く過去3カ月のヒストリカルデータアクセス",
-  "plan.essential.feature.HDA": "過去6か月分のヒストリカルデータアクセス",
-  "plan.pro.feature.HDA": "過去18か月分のヒストリカルデータアクセス",
+  "plan.essential.feature.HDA": "過去3年間の履歴データへのアクセス",
+  "plan.pro.feature.HDA": "過去7年間の履歴データへのアクセス",
   "plan.premium.feature.HDA": "無制限のヒストリカルデータアクセス",
   "plan.custom.feature.HDA": "無制限のヒストリカルデータアクセス",
   "plan.custom.feature.CDCR.top": "カスタム ディベロップメント",
   "plan.custom.feature.CDCR.bottom": "カスタムレポート",
   "plan.custom.feature.WLO": "ホワイト・レーベル　 オプション",
-
 
   "plans.details.hide": "詳細を隠す",
   "plans.details.expand": "全ての機能を見る",
