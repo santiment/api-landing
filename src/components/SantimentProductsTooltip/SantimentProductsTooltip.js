@@ -11,8 +11,7 @@ const PRODUCTS = [
   {
     img: sanbaseLogoImg,
     title: 'Sanbase',
-    description:
-      'Behavior analysis & monitoring platform for 1000+ crypto assets',
+    description: 'header.product.sanbase',
     to: 'https://app.santiment.net',
     showLink: true,
     linkTitle: 'sanbase'
@@ -20,7 +19,7 @@ const PRODUCTS = [
   {
     img: sheetsLogoImg,
     title: 'Sheets',
-    description: 'Google Spreadsheets plugin for importing Santiment data',
+    description: 'header.product.sheets',
     to: 'https://sheets.santiment.net',
     showLink: true,
     linkTitle: 'sheets'
@@ -28,7 +27,7 @@ const PRODUCTS = [
   {
     img: neuroLogoImg,
     title: 'API',
-    description: 'The most comprehensive crypto API on the market',
+    description: 'header.product.neuro',
     to: 'https://neuro.santiment.net',
     showLink: true,
     linkTitle: 'API'
@@ -36,6 +35,7 @@ const PRODUCTS = [
 ]
 
 const ProductItem = ({
+                       intl,
                        product: { to, img, title, linkTitle, description, showLink = true },
                        className
                      }) => {
@@ -45,7 +45,7 @@ const ProductItem = ({
         {img && <img className={styles.product__img} src={img} alt={title} />}
         <div className={styles.product__info}>
           <div className={styles.product__title}>{title}</div>
-          <div className={styles.product__description}>{description}</div>
+          <div className={styles.product__description}>{intl.formatMessage({ id: description })}</div>
 
           {showLink && (
             <MakeLink
