@@ -22,6 +22,9 @@
 
 .profileIcon {
   fill: var(--waterloo);
+  width: 15px;
+  height: 17px;
+  margin-top: 2px;
 
   &:hover {
     fill: var(--dodger-blue);
