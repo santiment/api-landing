@@ -54,11 +54,11 @@ const categories = [
     links: [
       {
         children: 'start',
-        href: 'https://help.santiment.net/santiment-getting-started',
+        href: 'https://academy.santiment.net/getting-started/',
       },
       {
         children: 'docs',
-        href: 'https://help.santiment.net/metrics-explained#api',
+        href: 'https://academy.santiment.net/',
       },
       { children: 'api', href: 'https://api.santiment.net/graphiql' },
       { children: 'blog', href: 'https://santiment.net/blog/' },
@@ -66,7 +66,7 @@ const categories = [
       {
         children: 'buy',
         href:
-          'https://help.santiment.net/faq/general/how-to-buy-san-tokens-using-our-bancor-integration',
+          'https://academy.santiment.net/san-tokens/buy-san-tokens-using-bancor/',
       },
     ],
   },

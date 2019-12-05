@@ -12,7 +12,7 @@ const questions = [
         <p className={styles.text}>
           {tr('faq.explore.left')}
           <a
-            href='https://help.santiment.net/santiment-getting-started/sanbase-api/using-the-sanbase-api-explorer'
+            href='https://academy.santiment.net/sanapi'
             rel='noopener noreferrer'
             target='_blank'
           >

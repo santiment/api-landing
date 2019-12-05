@@ -41,7 +41,7 @@ const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => {
             </a>{' '}
             or explore our{' '}
             <a
-              href='https://help.santiment.net/collections/1470439-santiment-getting-started#sanbase-api'
+              href='https://academy.santiment.net/sanapi/'
               target='_blank'
               rel='noopener noreferrer'
             >
