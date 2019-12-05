@@ -74,7 +74,7 @@ const IndexPage = ({ intl }) => (
           {intl.formatMessage({ id: 'main.get_access' })}
         </Button>
         <a
-          href='https://academy.santiment.net/metrics/'
+          href='https://academy.santiment.net/sanapi/'
           className={styles.doc}
           target='_blank'
           rel='noopener noreferrer'
