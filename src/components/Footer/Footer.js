@@ -54,11 +54,11 @@ const categories = [
     links: [
       {
         children: 'start',
-        href: 'https://academy.santiment.net/getting-started/',
+        href: 'https://academy.santiment.net/for-developers/',
       },
       {
         children: 'docs',
-        href: 'https://academy.santiment.net/',
+        href: 'https://academy.santiment.net/sanapi/',
       },
       { children: 'api', href: 'https://api.santiment.net/graphiql' },
       { children: 'blog', href: 'https://santiment.net/blog/' },
