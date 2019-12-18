@@ -1,7 +1,5 @@
 # Neuro landing page
 
-![](./src/images/neuro.png)
-
 This is the source for [`Neuro Landing Page`](https://neuro.santiment.net).
 
 ## Running locally
