@@ -45,13 +45,21 @@ const tabs = [
   {
     index: 2,
     content: (
+      <Link className={styles.tab} to='/account#get-started'>
+        Get started
+      </Link>
+    ),
+  },
+  {
+    index: 3,
+    content: (
       <Link className={styles.tab} to='/account#subscription'>
         Subscription
       </Link>
     ),
   },
   {
-    index: 3,
+    index: 4,
     content: (
       <Link className={styles.tab} to='/account#billing'>
         Billing
@@ -59,7 +67,7 @@ const tabs = [
     ),
   },
   {
-    index: 4,
+    index: 5,
     content: (
       <Link className={styles.tab} to='/account#logout'>
         Logout
