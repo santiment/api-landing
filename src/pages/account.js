@@ -12,6 +12,7 @@ import Layout from '../components/layout'
 import SettingsAPIKeys from '../components/Settings/SettingsAPIKeys'
 import SettingsSubscription from '../components/Settings/SettingsSubscription'
 import SettingsBilling from '../components/Settings/SettingsBilling'
+import SettingsGetStarted from '../components/Settings/SettingsGetStarted'
 import SettingsLogout from '../components/Settings/SettingsLogout'
 import GDPR from '../components/GDPR/GDPR'
 import { getCurrentNeuroSubscription } from '../utils/plans'
@@ -130,6 +131,7 @@ export default ({ location: { hash } }) => {
                   </Mutation>
                 )}
               </Mutation>
+              <SettingsGetStarted />
               <SettingsSubscription
                 subscription={getCurrentNeuroSubscription(data.currentUser)}
                 shouldHighlightRenew={shouldHighlightRenew}
