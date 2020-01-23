@@ -41,10 +41,10 @@ const gtagScript = (
   <script
     dangerouslySetInnerHTML={{
       __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-100571693-8');`,
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-100571693-8');
+  gtag('config', 'UA-100571693-1');`,
     }}
   />
 )
