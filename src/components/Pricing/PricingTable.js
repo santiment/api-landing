@@ -127,10 +127,14 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                   return null
                 }
 
+                const plans = neuro.plans.filter(
+                  ({ isDeprecated }) => !isDeprecated,
+                )
+
                 return (
                   <>
                     <div className={styles.cards}>
-                      {neuro.plans
+                      {plans
                         .filter(
                           ({ name, interval }) =>
                             interval === billing || name === 'FREE',
@@ -154,11 +158,8 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                           const intlId = `plan.${name.toLowerCase()}`
 
                           const { amount: altAmount, interval: altInterval } =
-                            getAlternativeBillingPlan(
-                              neuro.plans,
-                              name,
-                              billing,
-                            ) || {}
+                            getAlternativeBillingPlan(plans, name, billing) ||
+                            {}
 
                           const [altPrice] = formatPrice(
                             altAmount,
@@ -256,7 +257,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                     </div>
                     <PricingDetailsToggle
                       isLoggedIn={currentUser}
-                      plans={neuro.plans}
+                      plans={plans}
                       userPlan={userPlan}
                       billing={billing}
                       subscription={subscription}

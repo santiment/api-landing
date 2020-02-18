@@ -34,7 +34,9 @@ export const getAlternativeBillingPlan = (
   currentPlan,
   currentInterval,
 ) =>
-  plans.find(
-    ({ name, interval }) =>
-      name === currentPlan && interval !== currentInterval,
-  )
+  plans
+    .filter(({ isDeprecated }) => !isDeprecated)
+    .find(
+      ({ name, interval }) =>
+        name === currentPlan && interval !== currentInterval,
+    )
