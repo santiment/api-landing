@@ -8,7 +8,7 @@ import DETAILS from './details'
 import { formatPrice } from '../../utils/plans'
 import styles from './PricingDetails.module.scss'
 
-const all = [true, true, true, true, true]
+const all = [true, true, true, true]
 
 export default ({
   isLoggedIn,
@@ -30,8 +30,9 @@ export default ({
       {DETAILS.rows.map((row, i) => (
         <React.Fragment key={i}>
           <tr>
-            <td className={cx(styles.group, styles.cell)}>{tr(`pricing.details.${row.group.slug}`)}</td>
-            <td className={styles.cell} />
+            <td className={cx(styles.group, styles.cell)}>
+              {tr(`pricing.details.${row.group.slug}`)}
+            </td>
             <td className={styles.cell} />
             <td className={styles.cell} />
             <td className={styles.cell} />
@@ -39,7 +40,9 @@ export default ({
           </tr>
           {row.data.map(({ name, checks, slug }) => (
             <tr key={name}>
-              <td className={cx(styles.cell, styles.feature__title)}>{tr(`pricing.details.${slug}`)}</td>
+              <td className={cx(styles.cell, styles.feature__title)}>
+                {tr(`pricing.details.${slug}`)}
+              </td>
               {(checks || all).map((check, y) => (
                 <td key={y} className={cx(styles.cell, styles.feature__cell)}>
                   {check && (
@@ -64,7 +67,6 @@ export default ({
           .map(({ id, name, amount }) => {
             const plan = PLANS[name]
             const sameAsUserPlan = id === userPlan
-            const [price] = formatPrice(amount)
 
             return (
               <td key={id} className={styles.link}>
@@ -74,7 +76,8 @@ export default ({
                   <plan.Component
                     title={plan.title}
                     label={plan.link}
-                    price={price}
+                    //price={price}
+                    price={amount}
                     planId={+id}
                     billing={billing}
                     subscription={subscription}
