@@ -46,6 +46,7 @@
   @include text('h4');
   margin-bottom: 4px;
 }
+
 .desc {
   color: var(--waterloo);
   @include text('body-3');
@@ -87,4 +88,16 @@
   100% {
     transform: scale(1.1, 1.4);
   }
+}
+
+.deprecated {
+  @include text('caption');
+  display: inline-block;
+  background: #72ffff;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-left: 10px;
+  font-weight: 100;
+  position: relative;
+  top: -2px;
 }

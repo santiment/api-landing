@@ -11,8 +11,8 @@ import CancelSubscriptionDialog from '../CancelSubscriptionDialog/CancelSubscrip
 import ChangeBillingDialog from '../ChangeBillingDialog/ChangeBillingDialog'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
-import PLANS from '../Pricing/prices'
 import { RENEW_SUBSCRIPTION_MUTATION } from '../../gql/plans'
+import { tr } from '../../utils/translate'
 import styles from './SettingsSubscription.module.scss'
 
 const resetHighlight = () => navigate('/account#subscription')
@@ -27,7 +27,7 @@ const PlanText = ({ subscription }) => {
     const {
       currentPeriodEnd,
       cancelAtPeriodEnd,
-      plan: { amount, name, interval },
+      plan: { amount, name, interval, isDeprecated },
     } = subscription
 
     const { MMMM, DD, YYYY } = getDateFormats(new Date(currentPeriodEnd))
@@ -36,7 +36,12 @@ const PlanText = ({ subscription }) => {
 
     return (
       <>
-        <div className={styles.title}>{PLANS[name].title} Plan</div>
+        <div className={styles.title}>
+          {tr(`plan.${name.toLowerCase()}.title`)} Plan
+          {isDeprecated && (
+            <span className={styles.deprecated}>Deprecated</span>
+          )}
+        </div>
         <div className={styles.desc}>
           {price} per {interval}.{' '}
           {notCanceled && <ChangeBillingDialog subscription={subscription} />}
