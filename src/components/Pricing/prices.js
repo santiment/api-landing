@@ -24,14 +24,8 @@ export default {
     ),
     features: [
       'HDA',
-
       intl => `1k ${trStr(intl, 'plan.feature.AC.month')}`,
-      <>
-        {tr('plan.feature.SM')} <span className={styles.ast}>*</span>
-      </>,
-      <>
-        {tr('plan.free.feature.AR')} <span className={styles.ast}>**</span>
-      </>,
+      'metrics',
     ],
   },
   ESSENTIAL: {
@@ -40,10 +34,7 @@ export default {
     features: [
       'HDA',
       intl => `100k ${trStr(intl, 'plan.feature.AC.month')}`,
-      <>
-        {tr('plan.feature.SM')} <span className={styles.ast}>**</span>
-      </>,
-      tr('plan.feature.NA'),
+      'metrics',
     ],
   },
   PRO: {
@@ -53,10 +44,7 @@ export default {
     features: [
       'HDA',
       intl => `300k ${trStr(intl, 'plan.feature.AC.month')}`,
-      <>
-        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
-      </>,
-      tr('plan.feature.NA'),
+      'metrics',
     ],
   },
   PREMIUM: {
@@ -92,11 +80,7 @@ export default {
       'HDA',
       intl => `${trStr(intl, 'plan.custom.feature.CDCR.top')}
         ${trStr(intl, 'plan.custom.feature.CDCR.bottom')}`,
-
-      <>
-        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
-      </>,
-      'WLO',
+      'metrics',
     ],
   },
 }

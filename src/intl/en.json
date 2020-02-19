@@ -96,7 +96,7 @@
   "plan.pro.desc": "Advanced metrics & serious backtesting potential",
   "plan.premium.title": "Premium",
   "plan.premium.desc": "Full historical data and generous rate limits",
-  "plan.custom.title": "Corporate",
+  "plan.custom.title": "Tailored",
   "plan.custom.desc": "For organizations that need advanced data and support",
   "plan.title.left": "Go ",
   "plan.title.right": "now",
@@ -106,15 +106,22 @@
   "plan.feature.SM": "Standard metrics",
   "plan.feature.NA": "No attribution",
   "plan.feature.AM": "Advanced metrics",
+  "plan.free.feature.metrics": "All Sanbase Pro metrics",
   "plan.free.feature.AR": "Attribution required",
   "plan.free.feature.HDA": "Historical data access to last 3 months excluding the last 48 hours",
+
   "plan.essential.feature.HDA": "Historical data access to last 2 years",
+  "plan.essential.feature.metrics": "All Sanbase Pro metrics minus Exchange Flow, % of tokens on exchange and Daily Deposits",
+
   "plan.pro.feature.HDA": "Unlimited historical data access",
+  "plan.pro.feature.metrics": "All Sanbase Pro metrics plus Top Wallets, Time-bound metrics, ETH Miner balance, Daily Withdrawals and MVRV Long/Short difference",
   "plan.premium.feature.HDA": "Unlimited historical data access",
+
   "plan.custom.feature.HDA": "Unlimited historical data access",
   "plan.custom.feature.CDCR.top": "Custom development",
   "plan.custom.feature.CDCR.bottom": "Custom reports",
   "plan.custom.feature.WLO": "White-label options",
+  "plan.custom.feature.metrics": "All in Pro, plus Entity Labels (Exchange Wallets, Miners), Holder Distribution, Exchange-specific data, Stock to Flow ratio, DEX-related data, MakerDAO/DeFi data",
 
   "plans.details.hide": "Hide feature table",
   "plans.details.expand": "See full feature table",
@@ -265,7 +272,7 @@
   "pricing.details.basic": "Basic",
   "pricing.details.pro": "Pro",
   "pricing.details.premium": "Premium",
-  "pricing.details.corporate": "Corporate",
+  "pricing.details.corporate": "TailoredPricing/en",
 
   "pricing.details.financial": "Financial data",
   "pricing.details.open": "Open/High/Low/Close",

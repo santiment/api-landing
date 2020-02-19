@@ -108,13 +108,20 @@
   "plan.feature.AM": "アドバンス・メトリック",
   "plan.free.feature.AR": "著作権情報表示要",
   "plan.free.feature.HDA": "最新24時間を除く過去3カ月のヒストリカルデータアクセス",
+  "plan.free.feature.metrics": "All Sanbase Pro metrics",
+
   "plan.essential.feature.HDA": "過去3年間のヒストリカルデータへのアクセス",
+  "plan.essential.feature.metrics": "All Sanbase Pro metrics minus Exchange Flow, % of tokens on exchange and Daily Deposits",
+
   "plan.pro.feature.HDA": "過去7年間のヒストリカルデータへのアクセス",
+  "plan.pro.feature.metrics": "All Sanbase Pro metrics plus Top Wallets, Time-bound metrics, ETH Miner balance, Daily Withdrawals and MVRV Long/Short difference",
+
   "plan.premium.feature.HDA": "無制限のヒストリカルデータアクセス",
   "plan.custom.feature.HDA": "無制限のヒストリカルデータアクセス",
   "plan.custom.feature.CDCR.top": "カスタム ディベロップメント",
   "plan.custom.feature.CDCR.bottom": "カスタムレポート",
   "plan.custom.feature.WLO": "ホワイト・レーベル　 オプション",
+  "plan.custom.feature.metrics": "All in Pro, plus Entity Labels (Exchange Wallets, Miners), Holder Distribution, Exchange-specific data, Stock to Flow ratio, DEX-related data, MakerDAO/DeFi data",
 
   "plans.details.hide": "詳細を隠す",
   "plans.details.expand": "全ての機能を見る",
