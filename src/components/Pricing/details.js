@@ -1,18 +1,18 @@
 export default {
-  columns: ['', 'free', 'basic', 'pro', 'premium', 'corporate'],
+  columns: ['', 'free', 'basic', 'pro', 'corporate'],
   rows: [
     {
-      group: { name: 'Financial data', slug: 'financial'},
+      group: { name: 'Financial data', slug: 'financial' },
       data: [
         { name: 'Open/High/Low/Close', slug: 'open' },
-        { name: 'Price-volume difference indicator', slug: 'price'},
+        { name: 'Price-volume difference indicator', slug: 'price' },
       ],
     },
     {
-      group: {name: 'On-chain data', slug: 'onchain'},
+      group: { name: 'On-chain data', slug: 'onchain' },
       data: [
         { name: 'Open/High/Low/Close', slug: 'open' },
-        { name: 'Network growth', slug: 'networkgrowth'},
+        { name: 'Network growth', slug: 'networkgrowth' },
         { name: 'Token age consumed', slug: 'tokenage' },
         { name: 'Average token age consumed', slug: 'averagetokenage' },
         { name: 'Exchange flow', slug: 'exchangeflow' },
@@ -24,14 +24,26 @@ export default {
         { name: 'Distribution between mining pools', slug: 'distribution' },
         { name: 'Top holders percent of total supply', slug: 'topholders' },
         { name: 'Percent of total supply on exchanges', slug: 'totalsupply' },
-        { name: 'Realized value', checks: [false, false, true, true, true], slug: 'realizedvalue' },
-        { name: 'MVRV ratio', checks: [false, false, true, true, true], slug: 'mvrv' },
-        { name: 'NVT', checks: [false, false, true, true, true], slug: 'nvt' },
-        {name: 'Daily active deposits', slug: 'dailyactivedeposits', checks: [false, false, true, true, true]},
+        {
+          name: 'Realized value',
+          checks: [false, false, true, true],
+          slug: 'realizedvalue',
+        },
+        {
+          name: 'MVRV ratio',
+          checks: [false, false, true, true],
+          slug: 'mvrv',
+        },
+        { name: 'NVT', checks: [false, false, true, true], slug: 'nvt' },
+        {
+          name: 'Daily active deposits',
+          slug: 'dailyactivedeposits',
+          checks: [false, false, true, true],
+        },
       ],
     },
     {
-      group: {name: 'Social data', slug: 'socialdata'},
+      group: { name: 'Social data', slug: 'socialdata' },
       data: [
         { name: 'Dev activity', slug: 'devactivity' },
         { name: 'Topic search', slug: 'topicsearch' },

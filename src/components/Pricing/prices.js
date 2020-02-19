@@ -25,13 +25,7 @@ export default {
     features: [
       'HDA',
 
-      intl => (
-        <>
-          20 {trStr(intl, 'plan.feature.AC')}
-          <br />
-          1k {trStr(intl, 'plan.feature.AC.month')}
-        </>
-      ),
+      intl => `1k ${trStr(intl, 'plan.feature.AC.month')}`,
       <>
         {tr('plan.feature.SM')} <span className={styles.ast}>*</span>
       </>,
@@ -45,13 +39,7 @@ export default {
     Component: PlanActionDialog,
     features: [
       'HDA',
-      intl => (
-        <>
-          60 {trStr(intl, 'plan.feature.AC')}
-          <br />
-          10k {trStr(intl, 'plan.feature.AC.month')}
-        </>
-      ),
+      intl => `100k ${trStr(intl, 'plan.feature.AC.month')}`,
       <>
         {tr('plan.feature.SM')} <span className={styles.ast}>**</span>
       </>,
@@ -64,14 +52,7 @@ export default {
     link: 'Upgrade now',
     features: [
       'HDA',
-
-      intl => (
-        <>
-          120 {trStr(intl, 'plan.feature.AC')}
-          <br />
-          150k {trStr(intl, 'plan.feature.AC.month')}
-        </>
-      ),
+      intl => `300k ${trStr(intl, 'plan.feature.AC.month')}`,
       <>
         {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
       </>,
