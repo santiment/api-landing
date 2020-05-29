@@ -37,7 +37,7 @@
 .title {
   &,
   &__mark {
-    @include text('h1', 'm');
+    @include text('h1', 'l');
 
     @include responsive('phone', 'phone-xs') {
       font-size: 38px;
