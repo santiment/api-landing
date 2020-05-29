@@ -7,14 +7,14 @@
   max-width: none;
   margin: -145px 0 -100px;
   background: url('./girl.svg') no-repeat 37% 86%,
-    url('./bg.svg') no-repeat -80px -65px;
+    url('./bg.png') no-repeat 50% 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 
   @include responsive('phone', 'phone-xs') {
-    background: url('./bg.svg') no-repeat -410px 0;
+    background: url('./bg.png') no-repeat;
     z-index: 0;
     margin: -45px 0 -100px;
   }

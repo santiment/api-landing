@@ -15,7 +15,7 @@ const GDPRPage = ({ togglePrivacyPolicy, privacyPolicyAccepted }) => {
 
   return (
     <Panel padding className={styles.wrapper}>
-      <h2 className={styles.title}>Last step to your Santiment API key</h2>
+      <h2 className={styles.title}>Last step to your SanAPI key</h2>
       <p>
         Please accept our updated Privacy Policy to gain access to your API key
       </p>

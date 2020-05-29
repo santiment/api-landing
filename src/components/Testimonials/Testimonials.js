@@ -61,7 +61,6 @@ const Testimonials = ({ intl }) => {
           >
             <path
               d='M6 11L1 6L6 1'
-              stroke='#181B2B'
               strokeWidth='2'
               strokeMiterlimit='10'
               strokeLinecap='round'

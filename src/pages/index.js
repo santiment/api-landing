@@ -50,7 +50,7 @@ function onDocumentationClick() {
 
 const IndexPage = ({ intl }) => (
   <Layout>
-    <SEO title="Santiment's Neuro - Crypto’s Most Comprehensive API" />
+    <SEO title="SanAPI - Crypto’s Most Comprehensive API" />
     <section className={styles.wrapper}>
       <div>
         <h1 className={styles.title}>

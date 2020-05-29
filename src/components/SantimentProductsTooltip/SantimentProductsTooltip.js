@@ -14,29 +14,26 @@ const PRODUCTS = [
     description: 'header.product.sanbase',
     to: 'https://app.santiment.net',
     showLink: true,
-    linkTitle: 'sanbase'
   },
   {
     img: sheetsLogoImg,
-    title: 'Sheets',
+    title: 'Sansheets',
     description: 'header.product.sheets',
     to: 'https://sheets.santiment.net',
     showLink: true,
-    linkTitle: 'sheets'
   },
   {
     img: neuroLogoImg,
-    title: 'API',
+    title: 'SanAPI',
     description: 'header.product.neuro',
     to: 'https://neuro.santiment.net',
     showLink: true,
-    linkTitle: 'API'
   }
 ]
 
 const ProductItem = ({
                        intl,
-                       product: { to, img, title, linkTitle, description, showLink = true },
+                       product: { to, img, title, description, showLink = true },
                        className
                      }) => {
   return (
@@ -52,7 +49,7 @@ const ProductItem = ({
               className={cx(styles.wrapper__link)}
               to={to}
               as={'div'}
-              title={'Go to ' + linkTitle}
+              title={'Go to ' + title}
             />
           )}
         </div>
