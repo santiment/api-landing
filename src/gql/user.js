@@ -7,6 +7,7 @@ const userDataFragment = gql`
     username
     privacyPolicyAccepted
     apikeys
+    sanBalance
     subscriptions {
       id
       cancelAtPeriodEnd

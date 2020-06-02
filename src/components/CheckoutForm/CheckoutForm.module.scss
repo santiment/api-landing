@@ -209,3 +209,45 @@
     padding: 4px 3px;
   }
 }
+
+.hold {
+  position: relative;
+  border-radius: 4px;
+  color: var(--mirage);
+  padding: 12px 16px 8px 40px;
+  background: #f1f4ff;
+  margin-bottom: 16px;
+
+  &__icon {
+    position: absolute;
+    left: 17px;
+    top: 15px;
+  }
+}
+
+.learn {
+  margin-left: 4px;
+  color: var(--jungle-green);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--jungle-green-hover);
+  }
+}
+
+.discount {
+  position: relative;
+  margin-bottom: 16px;
+
+  .input {
+    margin: 0;
+  }
+}
+
+.valid {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  fill: var(--jungle-green);
+}
