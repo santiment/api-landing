@@ -1,0 +1,31 @@
+@import '~@santiment-network/ui/mixins';
+@import '~@santiment-network/ui/variables';
+
+.check {
+  color: var(--waterloo);
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__discount {
+    color: var(--jungle-green);
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    color: var(--mirage);
+    padding-top: 25px;
+    border-top: 1px solid var(--porcelain);
+    margin-top: 24px;
+  }
+
+  &__price {
+    @include text('h4', 'l');
+
+    font-weight: bold;
+  }
+}

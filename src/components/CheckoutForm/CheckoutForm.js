@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import gql from 'graphql-tag'
 import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Input from '@santiment-network/ui/Input'
-// import Icon from '@santiment-network/ui/Icon'
+import Icon from '@santiment-network/ui/Icon'
 import { CardElement } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
+import TotalPrice from './TotalPrice'
 import { tr, trStr } from '../../utils/translate'
+import { client } from '../../apollo/client'
 import visaSrc from './visa.png'
 import mastercardSrc from './mastercard.png'
 import styles from './CheckoutForm.module.scss'
@@ -24,17 +27,68 @@ const style = {
   },
 }
 
-const DiscountInput = () => {
+const CHECK_COUPON_QUERY = gql`
+  query getCoupon($coupon: String!) {
+    getCoupon(coupon: $coupon) {
+      amountOff
+      id
+      isValid
+      name
+      percentOff
+    }
+  }
+`
+
+function useDiscout(coupon) {
+  const [discount, setDiscount] = useState({})
+
+  useEffect(() => {
+    let race = false
+
+    const timer = setTimeout(
+      () =>
+        coupon &&
+        client
+          .query({
+            query: CHECK_COUPON_QUERY,
+            variables: { coupon },
+          })
+          .then(({ data: { getCoupon } }) => race || setDiscount(getCoupon))
+          .catch(() => race || setDiscount({ error: true })),
+      500,
+    )
+
+    return () => {
+      race = true
+      clearTimeout(timer)
+    }
+  }, [coupon])
+
+  return discount
+}
+
+const DiscountInput = ({ coupon, setCoupon, isValid }) => {
   return (
     <label className={cx(styles.label, styles.label_card)}>
-      {tr('billing.discount_code', 'Discount code')}
-      <Input className={styles.input} placeholder='123 - 567' name='coupon' />
+      Discount code
+      <div className={styles.discount}>
+        <Input
+          className={styles.input}
+          placeholder='2H8vZG5P'
+          name='coupon'
+          value={coupon}
+          onChange={({ currentTarget: { value } }) => setCoupon(value)}
+        />
+        {isValid && <Icon type='success-round' className={styles.valid} />}
+      </div>
     </label>
   )
 }
 
-const CheckoutForm = ({ intl, stripe, plan }) => {
+const CheckoutForm = ({ intl, stripe, plan, billing, price, currentUser }) => {
   const [visible, setVisible] = useState()
+  const [coupon, setCoupon] = useState('')
+  const discount = useDiscout(coupon)
 
   function onToggleClick() {
     setVisible(!visible)
@@ -117,7 +171,31 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
           </label>
         </div>
       )}
-      <DiscountInput />
+      <div className={styles.hold}>
+        <Icon className={styles.hold__icon} type='question-round-small' />
+        Holding 1000 SAN tokens will result in a 20% discount.{' '}
+        <a
+          href='https://santiment.net/about-santiment/how-to-buy-san/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles.learn}
+        >
+          Learn how to buy SAN.
+        </a>
+      </div>
+
+      <DiscountInput
+        coupon={coupon}
+        setCoupon={setCoupon}
+        isValid={discount.isValid}
+      />
+      <TotalPrice
+        price={price}
+        plan={plan}
+        planWithBilling={`${plan} ${billing}`}
+        percentOff={discount.percentOff}
+        hasSanDiscount={currentUser.sanBalance >= 1000}
+      />
     </>
   )
 }
