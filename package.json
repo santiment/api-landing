@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
     "@santiment-network/ui": "^0.5.167",
     "apollo-boost": "^0.4.0",
     "apollo-client": "^2.6.0",
