@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import gql from 'graphql-tag'
+import { Query } from "react-apollo"
 import Settings from './Settings'
 import { startOfMonth } from "../../utils/dates"
-import { Query } from "react-apollo"
 import styles from './ApiCallsStatistic.module.scss'
 
 export const API_CALLS_QUERY = gql`

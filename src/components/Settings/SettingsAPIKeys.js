@@ -5,8 +5,8 @@ import Label from '@santiment-network/ui/Label'
 import Button from '@santiment-network/ui/Button'
 import copy from 'copy-to-clipboard'
 import Settings from './Settings'
-import styles from './SettingsAPIKeys.module.scss'
 import ApiCallsStatistic from "./ApiCallsStatistic"
+import styles from './SettingsAPIKeys.module.scss'
 
 let genTimer
 
