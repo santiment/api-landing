@@ -103,3 +103,7 @@ export const getUTCTimeFormats = date => {
     ss: s < 10 ? `0${s}` : s,
   }
 }
+
+export function startOfMonth (date) {
+  return new Date(date.getFullYear(), date.getMonth(), 1)
+}
