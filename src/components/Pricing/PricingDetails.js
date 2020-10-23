@@ -7,7 +7,7 @@ import PLANS from './prices'
 import DETAILS from './details'
 import styles from './PricingDetails.module.scss'
 
-const all = [true, true, true, true]
+const all = [true, true, true]
 
 export default ({
   isLoggedIn,
@@ -32,7 +32,6 @@ export default ({
             <td className={cx(styles.group, styles.cell)}>
               {tr(`pricing.details.${row.group.slug}`)}
             </td>
-            <td className={styles.cell} />
             <td className={styles.cell} />
             <td className={styles.cell} />
             <td className={styles.cell} />

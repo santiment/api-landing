@@ -26,19 +26,19 @@ export default {
         { name: 'Percent of total supply on exchanges', slug: 'totalsupply' },
         {
           name: 'Realized value',
-          checks: [false, false, true, true],
+          checks: [false, true, true],
           slug: 'realizedvalue',
         },
         {
           name: 'MVRV ratio',
-          checks: [false, false, true, true],
+          checks: [false, true, true],
           slug: 'mvrv',
         },
-        { name: 'NVT', checks: [false, false, true, true], slug: 'nvt' },
+        { name: 'NVT', checks: [false, true, true], slug: 'nvt' },
         {
           name: 'Daily active deposits',
           slug: 'dailyactivedeposits',
-          checks: [false, false, true, true],
+          checks: [false, true, true],
         },
       ],
     },
