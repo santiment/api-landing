@@ -27,6 +27,7 @@ export default {
       intl => `1k ${trStr(intl, 'plan.feature.AC.month')}`,
       'metrics',
     ],
+    notShow: true
   },
   ESSENTIAL: {
     link: 'Upgrade now',

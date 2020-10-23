@@ -141,6 +141,11 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                         )
                         .map(({ id, name, amount }) => {
                           const card = PLANS[name]
+
+                          if(card.notShow) {
+                            return null
+                          }
+
                           const sameAsUserPlan = id === userPlan
                           let [price, priceType] = formatPrice(
                             amount,

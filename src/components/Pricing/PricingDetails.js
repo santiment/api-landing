@@ -5,7 +5,6 @@ import { tr } from '../../utils/translate'
 import PlanRestrictBtn from './PlanRestrictBtn'
 import PLANS from './prices'
 import DETAILS from './details'
-import { formatPrice } from '../../utils/plans'
 import styles from './PricingDetails.module.scss'
 
 const all = [true, true, true, true]
@@ -66,6 +65,11 @@ export default ({
           )
           .map(({ id, name, amount }) => {
             const plan = PLANS[name]
+
+            if(plan.notShow) {
+              return null
+            }
+
             const sameAsUserPlan = id === userPlan
 
             return (
