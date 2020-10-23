@@ -1,5 +1,5 @@
 export default {
-  columns: ['', 'free', 'basic', 'pro', 'corporate'],
+  columns: ['',  'basic', 'pro', 'corporate'],
   rows: [
     {
       group: { name: 'Financial data', slug: 'financial' },
