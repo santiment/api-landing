@@ -34,7 +34,7 @@ export default {
     Component: PlanActionDialog,
     features: [
       'HDA',
-      intl => `100k ${trStr(intl, 'plan.feature.AC.month')}`,
+      intl => `300k ${trStr(intl, 'plan.feature.AC.month')}`,
       'metrics',
     ],
   },
@@ -44,7 +44,7 @@ export default {
     link: 'Upgrade now',
     features: [
       'HDA',
-      intl => `300k ${trStr(intl, 'plan.feature.AC.month')}`,
+      intl => `600k ${trStr(intl, 'plan.feature.AC.month')}`,
       'metrics',
     ],
   },
