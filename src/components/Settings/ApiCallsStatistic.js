@@ -1,65 +1,56 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import gql from 'graphql-tag'
 import { Query } from "react-apollo"
 import Settings from './Settings'
-import { startOfMonth } from "../../utils/dates"
 import styles from './ApiCallsStatistic.module.scss'
 
+export const API_KEYS_STATS = {
+  ALL: 'ALL',
+  APIKEY: 'APIKEY'
+}
+
 export const API_CALLS_QUERY = gql`
-  query currentUser($from: DateTime!, $to: DateTime!) {
-    currentUser {
-      id
-      apikeys
-      apiCallsHistory(from: $from, to: $to, interval: "1d") {
-        datetime
-        apiCallsCount
-      }
+    query currentUser(
+        $from: DateTime!
+        $to: DateTime!
+        $authMethod: ApiCallAuthMethod!
+    ) {
+        currentUser {
+            id
+            apiCallsCount(from: $from, to: $to, authMethod: $authMethod)
+        }
     }
-  }
 `
 
-const NOW = new Date()
-const MONTH_START = startOfMonth(NOW)
-
-const ApiCallsStatistic = () => {
+const ApiCallsStatistic = ({type}) => {
   return (
     <Query query={API_CALLS_QUERY} variables={{
-      from: MONTH_START,
-      to: NOW
+      from: 'utc_now-30d',
+      to: 'utc_now',
+      authMethod: type
     }}>
       {({ data: { currentUser } = {} }, loading) => {
         if (loading || !currentUser) {
           return null
         }
 
-        const { apikeys = [], apiCallsHistory = []  } = currentUser
+        const { apiCallsCount  } = currentUser
 
-        if(apikeys.length === 0){
-          return  null
-        }
-
-        return <ApiStatistic apiCallsHistory={apiCallsHistory}/>
+        return <ApiStatistic apiCallsCount={apiCallsCount}/>
       }}
     </Query>
 
   )
 }
 
-const ApiStatistic = ({apiCallsHistory}) => {
-  const count = useMemo(
-    () => {
-      return apiCallsHistory.reduce((acc, item) => item.apiCallsCount + acc, 0)
-    },
-    [apiCallsHistory]
-  )
-
+const ApiStatistic = ({apiCallsCount}) => {
   return (
     <Settings.Row>
       <div className={styles.panel}>
         <div className={styles.title}>API Usage</div>
         <div className={styles.info}>
-          Count of API calls this month:{' '}
-          <span className={styles.count}>{count}</span>
+          Count of API calls last 30 days:{' '}
+          <span className={styles.count}>{apiCallsCount}</span>
         </div>
       </div>
     </Settings.Row>
